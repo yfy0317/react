@@ -9,7 +9,6 @@ class Application extends React.Component {
         super(props)
     }
     componentWillMount(){
-        console.log(this.props.aa)
     }
     render () {
         return (
@@ -21,7 +20,6 @@ class Application extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-        aa: state.vars.yy
     }
 };
 

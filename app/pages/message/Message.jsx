@@ -1,5 +1,4 @@
 import React from 'react'
-import Home2 from './Message.jsx'
 import { connect } from 'react-redux'
 import actions from '../../redux/actions'
 import { dispatch} from '../../redux/store'
