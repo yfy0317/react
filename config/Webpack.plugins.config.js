@@ -23,10 +23,22 @@ let plugins= [
     }),
     new webpack.optimize.CommonsChunkPlugin({
         name:'vendor',
-        filename:'public/[name].[hash].js'  //抽取代码分割文件的公共部分，减少代码分割引入通用库重复加载浪费
+        filename:'assets/[name].[hash].js'  //抽取代码分割文件的公共部分，减少代码分割引入通用库重复加载浪费
+    }),
+    new webpack.LoaderOptionsPlugin({
+        ////帮你解决浏览器前缀、IE兼容问题
+        options: {
+            postcss: function(){
+                return [
+                    require("autoprefixer")({
+                        browsers: ['ie>=8','>1% in CN','iOS >= 8', 'Android >= 4']
+                    }),
+                ]
+            }
+        }
     }),
     new webpack.HotModuleReplacementPlugin(), //热更新插件
-    new webpack.ProvidePlugin({$: "jquery", _: 'lodash', fetch: 'whatwg-fetch'}),
+    new webpack.ProvidePlugin({$: "jquery", _: 'lodash', fetch: 'sx-fetch'}),
     // new BundleAnalyzerPlugin.BundleAnalyzerPlugin({//文件打包分析工具，分析打包后文件引入了哪些文件
     //     analyzerMode: 'server',
     //     analyzerHost: '127.0.0.1',

@@ -1,19 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import actions from '../../redux/actions'
 import { dispatch} from '../../redux/store'
 class Application extends React.Component {
     constructor (props) {
         super(props)
     }
     componentWillMount(){
-
     }
     render () {
         return (
-            <div>
-                Welcome Home
-            </div>
+            <div>Welcome Home222</div>
         )
     }
 }
@@ -24,8 +20,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        init:()=> {
-        }
     }
 };
 

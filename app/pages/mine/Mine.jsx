@@ -1,10 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import actions from '../../redux/actions'
 import { dispatch} from '../../redux/store'
 
 
-class Application extends React.Component {
+class Mine extends React.Component {
     constructor (props) {
         super(props)
     }
@@ -12,9 +11,7 @@ class Application extends React.Component {
     }
     render () {
         return (
-            <div>
-               Mine
-            </div>
+            <div>Mine</div>
         )
     }
 }
@@ -25,8 +22,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Application)
+export default connect(mapStateToProps, mapDispatchToProps)(Mine)

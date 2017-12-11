@@ -1,5 +1,4 @@
 var plugins = require('./webpack.plugins.config')
-var config = require('config')
 
 module.exports = [
     require('../webpack.config.common')({
@@ -8,6 +7,5 @@ module.exports = [
         publicPath: '/',
         bundleHash: true,
         plugins: plugins.getProdPlugins(),
-        config: config
     })
 ]

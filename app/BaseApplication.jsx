@@ -7,7 +7,6 @@ import styles from './BaseApplication.scss'
 class Application extends React.Component {
     constructor (props) {
         super(props)
-        dispatch(actions.setVars('landingUrl', window.location.href))
     }
 
     render () {

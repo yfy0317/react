@@ -1,8 +1,8 @@
-import message from './message/index'
-import home from './home/index'
-import mine from './mine/index'
+import Message from './message/index'
+import Home from './home/index'
+import Mine from './mine/index'
 module.exports = [
-    ...message,
-    ...home,
-    ...mine
+    ...Message,
+    ...Home,
+    ...Mine
 ]

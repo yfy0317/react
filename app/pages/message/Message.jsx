@@ -4,7 +4,7 @@ import actions from '../../redux/actions'
 import { dispatch} from '../../redux/store'
 
 
-class Application extends React.Component {
+class Message extends React.Component {
     constructor (props) {
         super(props)
     }
@@ -12,9 +12,7 @@ class Application extends React.Component {
     }
     render () {
         return (
-            <div>
-                Message
-            </div>
+            <div>Message</div>
         )
     }
 }
@@ -28,4 +26,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Application)
+export default connect(mapStateToProps, mapDispatchToProps)(Message)
