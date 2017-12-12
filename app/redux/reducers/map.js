@@ -1,6 +1,4 @@
-/**
- * Created by chaiqing on 2017/7/26.
- */
+
 import { Map } from 'immutable'
 
 module.exports = function (state = Map({}), action = {}) {

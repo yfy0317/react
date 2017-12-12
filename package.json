@@ -4,8 +4,8 @@
   "description": "my first project",
   "main": "index.js",
   "scripts": {
-    "dev": " webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3000 --host 0.0.0.0",
-    "build": "webpack --config config/webpack.prod.config.js"
+    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3000 --host 0.0.0.0",
+    "build": "cross-env webpack --config config/webpack.prod.config.js"
   },
   "author": "yfy",
   "license": "MIT",
