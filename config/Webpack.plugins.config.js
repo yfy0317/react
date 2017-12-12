@@ -64,11 +64,21 @@ let getProdPlugins = function() {
     })),
     plugins.push(new ExtractTextPlugin('assets/[name]-[contenthash].css',{allChunks: true}),)
     plugins.push(new OptimizeCSSPlugin())  //压缩提取出的css，并解决ExtractTextPlugin分离出的js重复问题(多个文件引入同一css文件)
+    plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+        }
+    }))
     return plugins
 }
 let getDevPlugins = function () {
     plugins.push(new OpenBrowserPlugin({url: 'http://'+ util.getIp  + ':3000/home'}))
     plugins.push(new ExtractTextPlugin("[name].[contenthash].css"))        //将js中引入的css分离的插件
+    plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': JSON.stringify('development')
+        }
+    }))
     return plugins
 }
 module.exports={

@@ -28,7 +28,7 @@ module.exports = function (options) {
                     loader: 'babel-loader',
                     exclude: /(node_modules|bower_components)/,
                     options: {
-                        presets: ['react', 'es2015', "stage-0"],
+                        presets: ['react', 'env', "stage-0"],
                         plugins: [
                             [
                                 "transform-runtime", {  "helpers": false, "polyfill": true, "regenerator": true }
