@@ -5,9 +5,9 @@ let HtmlWebpackPlugin = require('html-webpack-plugin') ;
 let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+let CleanWebpackPlugin = require('clean-webpack-plugin');
 let path = require('path')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+let OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 let util = require('./index')
 let plugins= [
     new HtmlWebpackPlugin({

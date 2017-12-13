@@ -1,4 +1,4 @@
-var plugins = require('./webpack.plugins.config')
+const plugins = require('./webpack.plugins.config')
 
 module.exports = [
     require('../webpack.config.common')({

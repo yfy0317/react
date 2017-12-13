@@ -26,7 +26,7 @@ module.exports = function (options) {
                 {
                     test: /\.(jsx|js)?$/,
                     loader: 'babel-loader',
-                    exclude: /(node_modules|bower_components)/,
+                    exclude: /(node_modules)/,
                     options: {
                         presets: ['react', 'env', "stage-0"],
                         plugins: [
@@ -37,6 +37,7 @@ module.exports = function (options) {
                                 "import", {   "libraryName": "antd-mobile" }
                             ],
                             "transform-decorators-legacy",
+                            "add-module-exports",
                         ]
                     }
                 },
