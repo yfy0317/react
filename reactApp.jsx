@@ -2,6 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import ReactDom from 'react-dom'
 import fetch from 'sx-fetch'
+import {Toast} from 'antd-mobile'
 import {
     BrowserRouter ,
     Route,
@@ -11,7 +12,7 @@ import FadeIn from './app/BaseApplication.jsx'
 
 const routes = require('./app/pages')
 fetch.init({
-    baseURL: '',
+    baseURL: '/api',
     onShowErrorTip: (err, errorTip) => {
         if(errorTip) Toast.fail(errorTip);
     },

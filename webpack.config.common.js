@@ -96,10 +96,10 @@ module.exports = function (options) {
                 ]
             },
             proxy: {
-                '/api': {
-                    target: options.apiUrl,
-                    changeOrigin: true
-                }
+                '/api':{
+                    target: options.apiUrlPort,
+                    pathRewrite: {"^/api" : ""}
+                },
             }
         }
     }

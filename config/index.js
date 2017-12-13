@@ -13,7 +13,5 @@ function getIp () {
     return '127.0.0.1'
 }
 module.exports = {
-    apiUrl : '',
-    devPort: 3000,
     getIp: getIp()
 }
