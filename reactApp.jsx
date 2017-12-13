@@ -10,7 +10,7 @@ import {
 import store from './app/redux/store'
 import FadeIn from './app/BaseApplication.jsx'
 
-const routes = require('./app/pages')
+const routes = require('./app/index')
 fetch.init({
     baseURL: '/api',
     onShowErrorTip: (err, errorTip) => {
