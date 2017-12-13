@@ -1,10 +1,12 @@
-var webpack= require('webpack');
-var UglifyJSPlugin= require('uglifyjs-webpack-plugin');
-var CompressionPlugin = require("compression-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin') ;
+let webpack= require('webpack');
+let UglifyJSPlugin= require('uglifyjs-webpack-plugin');
+let CompressionPlugin = require("compression-webpack-plugin");
+let HtmlWebpackPlugin = require('html-webpack-plugin') ;
 let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+let path = require('path')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 let util = require('./index')
 let plugins= [
@@ -69,6 +71,12 @@ let getProdPlugins = function() {
             'NODE_ENV': JSON.stringify('production')
         }
     }))
+    plugins.push(new CleanWebpackPlugin('build',
+        {
+            root: path.resolve(__dirname, '..'),
+            verbose: true,
+            dry: false,
+        }))
     return plugins
 }
 let getDevPlugins = function () {
