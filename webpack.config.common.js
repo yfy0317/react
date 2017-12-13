@@ -13,7 +13,7 @@ module.exports = function (options) {
         },
         output: {
             path: __dirname + '/build/', // eslint-disable-line // 打包后的文件存放的地方
-            filename: options.bundleHash ? 'assets/bundle-[hash].js' : 'bundle.js',
+            filename: options.bundleHash ? 'assets/bundle-[chunkhash].js' : 'bundle.js',
             chunkFilename: 'assets/chunk-[id]-[chunkhash].js',
             publicPath: options.publicPath
         },

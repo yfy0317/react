@@ -11,7 +11,7 @@ class Application extends React.Component {
     }
     render () {
         return (
-            <div>Welcome Home222</div>
+            <div>Welcome Home</div>
         )
     }
 }
