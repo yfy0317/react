@@ -57,6 +57,14 @@ module.exports = function (options) {
                     })
                 },
                 {
+                    test: /\.less?$/,
+                    use: [
+                        "style-loader", // creates style nodes from JS strings,
+                        'postcss-loader',
+                        "less-loader", // compiles Sass to CSS
+                    ]
+                },
+                {
                     test: /\.html$/, loader: 'html-loader'
                 },
                 {

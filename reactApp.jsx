@@ -1,28 +1,16 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import ReactDom from 'react-dom'
-import fetch from 'sx-fetch'
-import {Toast} from 'antd-mobile'
+import fetchinit from './app/util/FetchInit'
 import {
     BrowserRouter ,
     Route,
 } from 'react-router-dom'
 import store from './app/redux/store'
 import FadeIn from './app/BaseApplication.jsx'
-
+require('jquery.cookie')
 const routes = require('./app/index')
-fetch.init({
-    baseURL: '/api',
-    onShowErrorTip: (err, errorTip) => {
-        if(errorTip) Toast.fail(errorTip);
-    },
-    onShowSuccessTip: (response, successTip) => {
-        if(successTip) Toast.info(successTip, 2);
-    },
-    isMock: (url) => {
-        return url.startsWith('/mock');
-    }
-});
+fetchinit()
 ReactDom.render((
     <Provider store={store}>
         <BrowserRouter><FadeIn>

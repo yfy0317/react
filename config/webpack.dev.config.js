@@ -5,6 +5,6 @@ module.exports = [require('../webpack.config.common')({
     dropConsole: false,
     publicPath: '/',
     plugins: Plugins.getDevPlugins(),
-    apiUrlPort: 'http://172.16.136.70:8080',
+    apiUrlPort: 'http://localhost:3000',
     bundleHash: false,
 })]

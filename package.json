@@ -4,7 +4,7 @@
   "description": "my first project",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3000 --host 0.0.0.0",
+    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3001 --host 0.0.0.0",
     "build": "cross-env webpack --config config/webpack.prod.config.js"
   },
   "author": "yfy",
@@ -28,7 +28,10 @@
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
+    "jquery.cookie": "^1.4.1",
     "json-loader": "^0.5.7",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "markdown-loader": "^2.0.1",
     "node-sass": "^4.7.2",
     "open-browser-webpack-plugin": "0.0.5",
