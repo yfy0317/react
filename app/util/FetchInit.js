@@ -1,6 +1,6 @@
 import fetch from 'sx-fetch'
 import {Toast} from 'antd-mobile'
-import {loading} from 'antd'
+
 
 const fetchinit =()=>{
     fetch.axiosInstance.interceptors.request.use(cfg => {

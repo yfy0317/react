@@ -34,7 +34,7 @@ module.exports = function (options) {
                                 "transform-runtime", {  "helpers": false, "polyfill": true, "regenerator": true }
                             ],
                             [
-                                "import", {   "libraryName": "antd-mobile" }
+                                "import", { libraryName: "antd", style: true }
                             ],
                             "transform-decorators-legacy",
                             "add-module-exports",
