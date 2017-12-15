@@ -34,7 +34,7 @@ module.exports = function (options) {
                                 "transform-runtime", {  "helpers": false, "polyfill": true, "regenerator": true }
                             ],
                             [
-                                "import", { libraryName: "antd" }
+                                "import", { libraryName: "antd", style: 'css'}
                             ],
                             "transform-decorators-legacy",
                             "add-module-exports",
