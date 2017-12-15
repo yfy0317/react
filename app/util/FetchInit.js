@@ -1,6 +1,5 @@
 import fetch from 'sx-fetch'
-import {Toast} from 'antd-mobile'
-
+import {message} from 'antd'
 
 const fetchinit =()=>{
     fetch.axiosInstance.interceptors.request.use(cfg => {
@@ -16,10 +15,10 @@ const fetchinit =()=>{
     fetch.init({
         baseURL: '/api',
         onShowErrorTip: (err, errorTip) => {
-            if(errorTip) Toast.fail(errorTip);
+            if(errorTip) message.error(errorTip);
         },
         onShowSuccessTip: (response, successTip) => {
-            if(successTip) Toast.info(successTip, 2);
+            if(successTip) message.info(successTip, 2);
         },
         isMock: (url) => {
             return url.startsWith('/mock');

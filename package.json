@@ -4,14 +4,13 @@
   "description": "my first project",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3001 --host 0.0.0.0",
+    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3000 --host 0.0.0.0",
     "build": "cross-env webpack --config config/webpack.prod.config.js"
   },
   "author": "yfy",
   "license": "MIT",
   "dependencies": {
     "antd": "^3.0.1",
-    "antd-mobile": "^2.1.1",
     "autoprefixer": "^7.2.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

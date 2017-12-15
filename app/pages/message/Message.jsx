@@ -1,15 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import actions from '../../redux/actions'
-import { dispatch} from '../../redux/store'
-import { setTitle} from '../../util/SetTitle'
+import {setTitle} from "../../util/SetTitle";
+import actions from "../../redux/actions";
 
-class Message extends React.Component {
+@setTitle('信息')
+//redux 用法
+@connect(
+    state =>{return{}},
+    dispatch =>{return{setTempValue:(key, value) => {dispatch(actions.setVars(key, value))}}}
+)
+export default class Message extends React.Component {
     constructor (props) {
         super(props)
     }
     componentWillMount(){
-        setTitle('信息')
     }
     render () {
         return (
@@ -17,14 +21,3 @@ class Message extends React.Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    return {
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Message)
