@@ -1,4 +1,5 @@
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
+let util = require('./config/index')
 module.exports = function (options) {
     return {
         devtool: options.devTool, // 配置生成Source Maps，选择合适的选项
@@ -97,6 +98,8 @@ module.exports = function (options) {
         devServer: {
             historyApiFallback: true, // 不跳转
             inline: true,
+            open: true,
+            openPage: `${util.getIp}:3000/home`,
             stats: {
                 cached: false,
                 exclude: [
@@ -107,7 +110,7 @@ module.exports = function (options) {
             proxy: {
                 '/api':{
                     target: options.apiUrlPort,
-                    pathRewrite: {"^/api" : ""}
+                    pathRewrite: {"^/api" : ""},
                 },
             }
         }

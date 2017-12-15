@@ -2,13 +2,12 @@ let webpack= require('webpack');
 let UglifyJSPlugin= require('uglifyjs-webpack-plugin');
 let CompressionPlugin = require("compression-webpack-plugin");
 let HtmlWebpackPlugin = require('html-webpack-plugin') ;
-let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
 let CleanWebpackPlugin = require('clean-webpack-plugin');
 let path = require('path')
 let OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-let util = require('./index')
+
 let plugins= [
     new HtmlWebpackPlugin({
         chunks: [ 'main','vendor','webpack-runtime'],
@@ -45,6 +44,7 @@ let plugins= [
             }
         }
     }),
+
     new webpack.HotModuleReplacementPlugin(), //热更新插件
     new webpack.ProvidePlugin({$: "jquery", _: 'lodash', fetch: 'sx-fetch'}),
     // new BundleAnalyzerPlugin.BundleAnalyzerPlugin({//文件打包分析工具，分析打包后文件引入了哪些文件
@@ -87,7 +87,6 @@ let getProdPlugins = function() {
     return plugins
 }
 let getDevPlugins = function () {
-    plugins.push(new OpenBrowserPlugin({url: 'http://'+ util.getIp  + ':3000/home'}))
     plugins.push(new ExtractTextPlugin("[name].[contenthash].css"))        //将js中引入的css分离的插件
     plugins.push(new webpack.DefinePlugin({
         'process.env': {
