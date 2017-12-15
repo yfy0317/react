@@ -8,3 +8,6 @@ npm run dev
 
 
 主要用到  react  react router   redux
+
+用法  npm install  ===> npm run dev 
+
