@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {setTitle} from "../../util/SetTitle";
-
-@setTitle('首页')
 @connect(
     state =>{ return{} },
     dispatch =>{return{}}
@@ -12,6 +10,7 @@ export default class Home extends React.Component {
         super(props)
     }
     componentWillMount(){
+        setTitle('首页')
     }
     render () {
         return (

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import {setTitle} from "../../util/SetTitle";
 import actions from "../../redux/actions";
 
-@setTitle('信息')
+
 //redux 用法
 @connect(
     state =>{return{}},
@@ -14,6 +14,7 @@ export default class Message extends React.Component {
         super(props)
     }
     componentWillMount(){
+        setTitle('信息')
     }
     render () {
         return (

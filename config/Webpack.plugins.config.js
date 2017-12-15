@@ -4,10 +4,11 @@ let CompressionPlugin = require("compression-webpack-plugin");
 let HtmlWebpackPlugin = require('html-webpack-plugin') ;
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
+let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin');
 let path = require('path')
 let OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-
+let util = require('./index')
 let plugins= [
     new HtmlWebpackPlugin({
         chunks: [ 'main','vendor','webpack-runtime'],
@@ -87,6 +88,7 @@ let getProdPlugins = function() {
     return plugins
 }
 let getDevPlugins = function () {
+    plugins.push(new OpenBrowserPlugin({url: 'http://'+ util.getIp  + ':3000/home'}))
     plugins.push(new ExtractTextPlugin("[name].[contenthash].css"))        //将js中引入的css分离的插件
     plugins.push(new webpack.DefinePlugin({
         'process.env': {

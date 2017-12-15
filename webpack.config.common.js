@@ -98,8 +98,6 @@ module.exports = function (options) {
         devServer: {
             historyApiFallback: true, // 不跳转
             inline: true,
-            open: true,
-            openPage: `${util.getIp}:3000/home`,
             stats: {
                 cached: false,
                 exclude: [

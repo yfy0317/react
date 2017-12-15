@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setTitle} from '../../util/SetTitle'
 
-@setTitle('我的')
+
 @connect(
     state =>{ return{} },
     dispatch =>{return{}}
@@ -12,6 +12,7 @@ export default class Mine extends React.Component {
         super(props)
     }
     componentWillMount(){
+        setTitle('我的')
     }
     render () {
         return (
