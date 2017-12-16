@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {setTitle} from "../../util/SetTitle";
 import actions from "../../redux/actions";
+import {setTitle} from "../../comps/SetTitle";
 
 
 //redux 用法
@@ -9,16 +9,18 @@ import actions from "../../redux/actions";
     state =>{return{}},
     dispatch =>{return{setTempValue:(key, value) => {dispatch(actions.setVars(key, value))}}}
 )
+@setTitle('信息')
 export default class Message extends React.Component {
     constructor (props) {
         super(props)
     }
     componentWillMount(){
-        setTitle('信息')
     }
     render () {
         return (
-            <div>Message</div>
+            <div>
+
+                Message</div>
         )
     }
 }
