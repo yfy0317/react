@@ -4,11 +4,16 @@
   "description": "react project",
   "main": "template.html",
   "scripts": {
-    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --progress --colors --port 3000 --host 0.0.0.0",
+    "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --hot --inline  --progress --colors --port 3000 --host 0.0.0.0 ",
     "build": "cross-env webpack --config config/webpack.prod.config.js"
   },
   "author": "yanngfeiyu",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "webpack",
+    "antd"
+  ],
   "dependencies": {
     "antd": "^3.0.1",
     "jquery": "^3.2.1",
