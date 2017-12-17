@@ -89,7 +89,6 @@ let getProdPlugins = function() {
 }
 let getDevPlugins = function () {
     plugins.push(new OpenBrowserPlugin({url: 'http://'+ util.getIp  + ':3000/home'}))
-    plugins.push(new ExtractTextPlugin("[name].[contenthash].css"))        //将js中引入的css分离的插件
     plugins.push(new webpack.DefinePlugin({
         'process.env': {
             'NODE_ENV': JSON.stringify('development')

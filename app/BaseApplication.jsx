@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import actions from '../app/redux/actions'
-import { dispatch} from '../app/redux/store'
 import styles from './BaseApplication.scss'
 
 class Application extends React.Component {
@@ -12,7 +10,7 @@ class Application extends React.Component {
     render () {
         return (
             <div className={styles.content}>
-                {this.props.children}
+                 {this.props.children}
             </div>
         )
     }

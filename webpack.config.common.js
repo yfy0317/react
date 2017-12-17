@@ -48,14 +48,21 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.(scss)$/,
-                    loader: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: [
-                            "css-loader?modules&localIdentName=[name]-[local]",
+                    loader: options.bundleHash ?
+                        ExtractTextPlugin.extract({
+                            fallback: 'style-loader',
+                            use: [
+                                "css-loader?modules&localIdentName=[name]-[local][hash]",
+                                'postcss-loader',
+                                'sass-loader'
+                            ]
+                        }):[
+                            "style-loader", // creates style nodes from JS strings,
+                            "css-loader?modules&localIdentName=[name]-[local]---[hash]",
                             'postcss-loader',
-                            'sass-loader'
-                        ]
-                    })
+                            "sass-loader", // compiles Sass to CSS
+                        ],
+
                 },
                 {
                     test: /\.less?$/,
