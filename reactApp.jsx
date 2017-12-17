@@ -21,4 +21,4 @@ ReactDom.render((
             ))}</div>
         </BrowserRouter></FadeIn>
     </Provider>
-), document.getElementById('app'))
+), document.getElementById('root'))
