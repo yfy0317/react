@@ -33,19 +33,6 @@ let plugins= [
         name: 'webpack-runtime',
         filename: 'assets/vendor.[hash].js', // 注意runtime只能用[hash]
     }),
-    new webpack.LoaderOptionsPlugin({
-        ////帮你解决浏览器前缀、IE兼容问题
-        options: {
-            postcss: function(){
-                return [
-                    require("autoprefixer")({
-                        browsers: ['ie>=8','>1% in CN','iOS >= 8', 'Android >= 4']
-                    }),
-                ]
-            }
-        }
-    }),
-
     new webpack.HotModuleReplacementPlugin(), //热更新插件
     new webpack.ProvidePlugin({$: "jquery", _: 'lodash', fetch: 'sx-fetch'}),
     // new BundleAnalyzerPlugin.BundleAnalyzerPlugin({//文件打包分析工具，分析打包后文件引入了哪些文件

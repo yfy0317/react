@@ -1,5 +1,6 @@
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let util = require('./config/index')
+let path = require('path')
 module.exports = function (options) {
     return {
         devtool: options.devTool, // 配置生成Source Maps，选择合适的选项
@@ -44,10 +45,16 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.css$/,
+                    exclude: /(node_modules)/,
+                    use: [ "style-loader", 'postcss-loader']
+                },
+                {
+                    test: /\.css$/,
                     use: [ "style-loader", 'postcss-loader']
                 },
                 {
                     test: /\.(scss)$/,
+                    exclude: /(node_modules)/,
                     loader: options.bundleHash ?
                         ExtractTextPlugin.extract({
                             fallback: 'style-loader',
@@ -58,7 +65,7 @@ module.exports = function (options) {
                             ]
                         }):[
                             "style-loader", // creates style nodes from JS strings,
-                            "css-loader?modules&localIdentName=[name]-[local]---[hash]",
+                            "css-loader?modules&localIdentName=[name]-[local][hash]",
                             'postcss-loader',
                             "sass-loader", // compiles Sass to CSS
                         ],
@@ -101,10 +108,12 @@ module.exports = function (options) {
                 }
             ]
         },
+
         plugins: options.plugins,
         devServer: {
             historyApiFallback: true, // 不跳转
             inline: true,
+            contentBase: [path.join(__dirname, 'app')],
             stats: {
                 cached: false,
                 exclude: [

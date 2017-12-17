@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import styles from './BaseApplication.scss'
 
 class Application extends React.Component {
@@ -15,9 +14,4 @@ class Application extends React.Component {
         )
     }
 }
-
-const mapStateToProps = (state) => {
-    return {}
-}
-
-export default connect(mapStateToProps)(Application)
+export default Application
