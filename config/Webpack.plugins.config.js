@@ -7,13 +7,15 @@ let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
 let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin');
 let path = require('path')
+var HappyPack = require('happypack');
+var happyThreadPool = HappyPack.ThreadPool({ size: 4 });
 let OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 let util = require('./index')
 let plugins= [
     new HtmlWebpackPlugin({
         chunks: [ 'main','vendor','webpack-runtime'],
         filename: 'index.html',            //生成的html的文件名
-        template: './template.html',       //依据的模板
+        template: path.resolve(__dirname, '../static/template.html'),       //依据的模板
         title: 'sx-webpack',
         inject: true,                      //注入的js文件将会被放在body标签中,当值为'head'时，将被放在head标签中
         minify: {                          //压缩配置
@@ -21,6 +23,7 @@ let plugins= [
             collapseWhitespace: true,      //删除html中的空白符
             removeAttributeQuotes: true    //删除html元素中属性的引号
         },
+        favicon: path.resolve(__dirname, '../static/favicon.png'),
         chunksSortMode: 'dependency'       //按dependency的顺序引入
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -34,19 +37,7 @@ let plugins= [
         filename: 'assets/vendor.[hash].js', // 注意runtime只能用[hash]
     }),
     new webpack.HotModuleReplacementPlugin(), //热更新插件
-    new webpack.ProvidePlugin({$: "jquery", _: 'lodash', fetch: 'sx-fetch'}),
-    // new BundleAnalyzerPlugin.BundleAnalyzerPlugin({//文件打包分析工具，分析打包后文件引入了哪些文件
-    //     analyzerMode: 'server',
-    //     analyzerHost: '127.0.0.1',
-    //     analyzerPort: 8889,
-    //     reportFilename: 'report.html',
-    //     defaultSizes: 'parsed',
-    //     openAnalyzer: true,
-    //     generateStatsFile: false,
-    //     statsFilename: 'stats.json',
-    //     statsOptions: null,
-    //     logLevel: 'info'
-    // })
+    new webpack.ProvidePlugin({$: "jquery", _: 'lodash'}),
 ]
 
 let getProdPlugins = function() {
@@ -80,6 +71,17 @@ let getDevPlugins = function () {
         'process.env': {
             'NODE_ENV': JSON.stringify('development')
         }
+    }))
+    plugins.push(new webpack.DllReferencePlugin({
+        context: __dirname,
+        manifest: require('./dll/vendor-manifest.json')
+    }))
+    plugins.push(new HappyPack({
+        id:"happybabel",
+        loaders:['babel-loader'],
+        threadPool:happyThreadPool,
+        cache:true,
+        verbose:true
     }))
     return plugins
 }

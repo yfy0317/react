@@ -27,21 +27,8 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.(jsx|js)?$/,
-                    loader: 'babel-loader',
+                    loader: options.bundleHash ? 'babel-loader':'happypack/loader?id=happybabel',
                     exclude: /(node_modules)/,
-                    options: {
-                        presets: ['react', 'env', "stage-0"],
-                        plugins: [
-                            [
-                                "transform-runtime", {  "helpers": false, "polyfill": true, "regenerator": true }
-                            ],
-                            [
-                                "import", { libraryName: "antd", style: 'css'}
-                            ],
-                            "transform-decorators-legacy",
-                            "add-module-exports",
-                        ]
-                    }
                 },
                 {
                     test: /\.css$/,
