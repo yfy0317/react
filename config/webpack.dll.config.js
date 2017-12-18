@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        vendors: [
+        vendor: [
             'react', 'react-dom', 'react-redux', 'react-router-dom', 'redux', 'lodash','antd',"immutable", "bluebird",'jquery',
         ]
     },
