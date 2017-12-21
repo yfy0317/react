@@ -1,15 +1,17 @@
 import fetch from 'sx-fetch'
 import {message} from 'antd'
-
-const fetchinit =()=>{
+const fetchinit =(init)=>{
     fetch.axiosInstance.interceptors.request.use(cfg => {
+        init('showLoading',true)
         return cfg;
     }, error => {
         return Promise.reject(error);
     });
     fetch.axiosInstance.interceptors.response.use(response => {
+        // init('showLoading',false)
         return response;
     }, error => {
+        init('showLoading',false)
         return Promise.reject(error);
     });
     fetch.init({
@@ -25,4 +27,5 @@ const fetchinit =()=>{
         }
     });
 }
+
 export default fetchinit

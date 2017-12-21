@@ -77,7 +77,6 @@
     outline: none;
     z-index: 10;
   }
-
   .floatContainer{
     width: 100%;
     position: fixed;
@@ -86,5 +85,10 @@
     left:0;
     background-color: rgba(51, 51, 51, 0.6);
   }
-
+}
+.loading{
+  position: fixed;
+  top: 47%;
+  left: 45%;
+  width: 100%;
 }

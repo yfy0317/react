@@ -1,7 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import ReactDom from 'react-dom'
-import fetchinit from './app/util/FetchInit'
 import {
     BrowserRouter ,
     Route,
@@ -10,7 +9,6 @@ import store from './app/redux/store'
 import FadeIn from './app/BaseApplication.jsx'
 require('jquery.cookie')
 const routes = require('./app/index')
-fetchinit()
 ReactDom.render((
     <Provider store={store}><FadeIn>
         <BrowserRouter>
