@@ -18,8 +18,14 @@ class Application extends React.Component {
     render () {
         return (
             <div className={styles.content}>
-                {this.props.children}
-                {this.props.showLoading ? <div className={styles.loading}><ReactLoading type='spinningBubbles' color='#929292' width='2rem'/></div> : <div/>}
+                { this.props.children }
+                {
+                    this.props.showLoading ?
+                    <div className={styles.loading}>
+                        <ReactLoading type='spinningBubbles' color='#929292' width='2rem'/>
+                    </div> :
+                    <div/>
+                }
             </div>
         )
     }
