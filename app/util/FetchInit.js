@@ -8,7 +8,7 @@ const fetchinit =(init)=>{
         return Promise.reject(error);
     });
     fetch.axiosInstance.interceptors.response.use(response => {
-        // init('showLoading',false)
+        init('showLoading',false)
         return response;
     }, error => {
         init('showLoading',false)
