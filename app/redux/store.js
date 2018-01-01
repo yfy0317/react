@@ -1,7 +1,7 @@
-
+import persistState from 'redux-localstorage';
 'use strict'
 
-var {createStore, combineReducers} = require('redux')
+var {createStore, combineReducers, compose} = require('redux')
 var vars = require('./reducers/vars')
 var objs = require('./reducers/objs')
 var map = require('./reducers/map')
@@ -11,5 +11,7 @@ var mainReducer = combineReducers({
   objs,
   map
 })
-
-export default module.exports = createStore(mainReducer)
+const createPersistentStore = compose(
+    persistState()
+)(createStore);
+export default module.exports = createPersistentStore(mainReducer)
