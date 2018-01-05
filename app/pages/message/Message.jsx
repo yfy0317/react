@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import actions from "../../redux/actions";
-import {setTitle} from "../../comps/SetTitle";
+import {setTitle} from "../../decorators/SetTitle";
 
 
 //redux 用法

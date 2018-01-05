@@ -5,7 +5,7 @@
       "transform-runtime", {  "helpers": false, "polyfill": true, "regenerator": true }
     ],
     [
-      "import", { "libraryName": "antd", "style": "css"}
+      "import", { "libraryName": "antd-mobile", "style": "css"}
     ],
     "transform-decorators-legacy",
     "add-module-exports"

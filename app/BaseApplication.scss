@@ -1,4 +1,7 @@
 :global{
+  html{
+    background: rgba(0,0,0,0);
+  }
   body {
     word-wrap: break-word;
     word-break: normal;
@@ -85,10 +88,9 @@
     left:0;
     background-color: rgba(51, 51, 51, 0.6);
   }
+  .am-toast-notice-content .am-toast-text {
+    min-width: 300px!important;
+    padding: 50px 70px !important;
+  }
 }
-.loading{
-  position: fixed;
-  top: 47%;
-  left: 45%;
-  width: 100%;
-}
+

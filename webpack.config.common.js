@@ -37,6 +37,7 @@ module.exports = function (options) {
                 },
                 {
                     test: /\.css$/,
+                    include: [path.resolve(__dirname, 'node_modules/normalize.css'),path.resolve(__dirname, 'node_modules/antd-mobile')],
                     use: [ "style-loader", 'postcss-loader']
                 },
                 {

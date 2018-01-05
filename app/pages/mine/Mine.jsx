@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {setTitle} from "../../comps/SetTitle";
+import {setTitle} from "../../decorators/SetTitle";
 @connect(
     state =>{ return{} },
     dispatch =>{return{}}

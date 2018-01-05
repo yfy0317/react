@@ -16,7 +16,7 @@
     "antd"
   ],
   "dependencies": {
-    "antd": "^3.0.1",
+    "antd-mobile": "^2.1.3",
     "bluebird": "^3.5.1",
     "exports-loader": "^0.6.4",
     "happypack": "^4.0.0",
@@ -27,7 +27,6 @@
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-loading": "^1.0.3",
     "react-redux": "^5.0.6",
     "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2",
