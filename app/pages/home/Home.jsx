@@ -1,12 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {setTitle} from "../../decorators/SetTitle";
 
 @connect(
     state =>{ return{} },
     dispatch =>{return{}}
 )
-@setTitle('首页')
 export default class Home extends React.Component {
     constructor (props) {
         super(props)
@@ -16,9 +14,7 @@ export default class Home extends React.Component {
     }
     render () {
         return (
-            <div>
-                Home
-            </div>
+            <div>Home</div>
         )
     }
 }

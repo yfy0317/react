@@ -2,7 +2,7 @@ import React from 'react'
 
 export const setBackGround = (background) => (WrappedComponent) => {
     return class extends React.Component {
-        componentWillMount () {
+        componentDidMount () {
             this.originBodyColor = document.body.style.background
             document.body.style.background= background
         }

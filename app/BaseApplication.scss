@@ -6,6 +6,7 @@
     word-wrap: break-word;
     word-break: normal;
     font-size: 0.675rem!important;
+    background: #fff;
     color: #333!important;
   }
 
@@ -91,6 +92,9 @@
   .am-toast-notice-content .am-toast-text {
     min-width: 300px!important;
     padding: 50px 70px !important;
+    border-radius: 15px;
   }
 }
+
+
 

@@ -1,20 +1,11 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import actions from "../../redux/actions";
-import {setTitle} from "../../decorators/SetTitle";
 
-
-//redux 用法
-@connect(
-    state =>{return{}},
-    dispatch =>{return{setTempValue:(key, value) => {dispatch(actions.setVars(key, value))}}}
-)
-@setTitle('信息')
 export default class Message extends React.Component {
     constructor (props) {
         super(props)
     }
-    componentWillMount(){
+    componentWillMount() {
+
     }
     render () {
         return (
