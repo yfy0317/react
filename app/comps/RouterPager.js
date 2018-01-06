@@ -8,7 +8,7 @@ export default class RouterPager extends React.Component {
         if(props.protected && !$.cookie('token')){
             store.dispatch(actions.setVars('backUrl', props.location.pathname))
             store.dispatch(actions.setVars('protectedCb', props.protected))
-            this.props.history.replace('/prected')
+            this.props.history.replace('/protected')
         }
     }
 }

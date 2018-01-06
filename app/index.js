@@ -1,8 +1,8 @@
 import Message from './pages/message/index'
 import Home from './pages/home/index'
-import Prected from './pages/prected/index'
+import Protected from './pages/protected/index'
 module.exports = [
     ...Message,
     ...Home,
-    ...Prected
+    ...Protected
 ]
