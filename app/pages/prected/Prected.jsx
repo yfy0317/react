@@ -8,16 +8,14 @@ export default class Home extends React.Component {
         super(props)
     }
     componentWillMount(){
-        console.log(this)
     }
     go(){
-        $.cookie('token','111',{ expires: 0.08, path: '/' })
+        $.cookie('token','用户token',{ expires: 0.08, path: '/' })
         if(!this.props.backUrl || this.props.backUrl === '/home'){
             this.props.history.replace('/home')
         }else{
             this.props.protectedCb ? this.cbNext() : this.props.history.replace(`${this.props.backUrl}`)
         }
-
     }
     cbNext() {
         //做一些登陆之后的处理
