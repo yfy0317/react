@@ -1,5 +1,5 @@
 import React from 'react'
-import RouterPager from '../RouterPager.jsx'
+import RouterPager from '../../comps/RouterPager'
 
 export default class Message extends RouterPager {
     constructor (props) {
