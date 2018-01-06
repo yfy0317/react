@@ -17,7 +17,7 @@ ReactDom.render((
         <FadeIn><BrowserRouter>
             <div>{routes.map((route, i) => (
                 <Route key={i} exact path={route.path} render={(props) => {
-                    return(<route.component {...props} toast={Toast} fetch={Fetch} protected={route.protected}>{
+                    return(<route.component {...props} toast={Toast} fetch={Fetch} protected={route.protected} cb={route.cb}>{
                         setTitle(route.title)
                     }</route.component>)
                 }}/>
