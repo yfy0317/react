@@ -16,11 +16,11 @@ ReactDom.render((
     <Provider store={store}>
         <FadeIn><BrowserRouter>
             <div>{routes.map((route, i) => (
-                <Route key={i} exact path={route.path}  render={(props) => {
-                    setTitle(route.title)
-                    return(
-                    <route.component {...props} toast={Toast} fetch={Fetch} />
-                )}}/>
+                <Route key={i} exact path={route.path} render={(props) => {
+                    return(<route.component {...props} toast={Toast} fetch={Fetch} protected={route.protected}>{
+                        setTitle(route.title)
+                    }</route.component>)
+                }}/>
             ))}</div>
         </BrowserRouter></FadeIn>
     </Provider>

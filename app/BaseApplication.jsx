@@ -16,16 +16,11 @@ class Application extends React.Component {
         fetchinit(this.props.init)
     }
     render () {
+        let { showLoading } = this.props
         return (
-            <div className={styles.content}>
+            <div>
                 { this.props.children }
-                {
-                    this.props.showLoading ?
-                    <div className={styles.loading}>
-                        <ReactLoading />
-                    </div> :
-                    <div/>
-                }
+                { showLoading ? <ReactLoading /> : <div/> }
             </div>
         )
     }

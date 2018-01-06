@@ -1,6 +1,7 @@
 import React from 'react'
+import RouterPager from '../RouterPager.jsx'
 
-export default class Message extends React.Component {
+export default class Message extends RouterPager {
     constructor (props) {
         super(props)
     }
@@ -9,7 +10,9 @@ export default class Message extends React.Component {
     }
     render () {
         return (
-            <div>Message</div>
+            <div>Message
+                <button onClick={()=>this.props.history.push('/home')}>点击跳转</button>
+            </div>
         )
     }
 }
