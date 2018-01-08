@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         vendor: [
-            'react', 'react-dom', 'react-redux', 'react-router-dom', 'redux', 'lodash','antd',"immutable", "bluebird",'jquery',
+            'react', 'react-dom', 'react-redux', 'react-router-dom', 'redux', 'lodash','antd-mobile',"immutable", "bluebird",'jquery',
         ]
     },
     output: {
