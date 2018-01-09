@@ -13,7 +13,7 @@ export default class Message extends RouterPager {
     render () {
         return (
             <div>
-                Mine
+                222222222
                 <Footer FooterConfig={LenderHomeConfig}/>
             </div>
         )

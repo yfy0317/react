@@ -50,7 +50,7 @@ export default class Home extends RouterPager {
                             </div>
                         </div>
                     </div>
-                    <Prodcast />
+                    <Prodcast {...this.props} />
                 </div>
                 <div>
                     <div className={styles.fine}/>

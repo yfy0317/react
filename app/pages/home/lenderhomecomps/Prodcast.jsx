@@ -2,9 +2,8 @@ import React from 'react';
 import horn from '../lenderhomeimg/喇叭(2).png';
 import styles from './Prodcast.scss'
 import { Carousel} from 'antd-mobile';
-import {withRouter} from 'react-router-dom'
-@withRouter
-export default class Prodcast extends React.Component{
+import RouterPager from '../../../comps/RouterPager'
+export default class Prodcast extends RouterPager{
     constructor (props) {
         super(props)
     }
