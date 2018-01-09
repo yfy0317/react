@@ -2,6 +2,7 @@
   padding-left: 30px;
   padding-right: 10px;
   margin-top: 25px;
+  animation: easeinAnimate 1s ease 1 forwards;
   .item {
     background: #fff;
     display: inline-block;
@@ -52,5 +53,16 @@
       top: 26px;
       left: 77px;
     }
+  }
+}
+
+@keyframes easeinAnimate {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

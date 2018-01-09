@@ -25,7 +25,7 @@ export default class Home extends React.Component {
         return (
             <div>
                 <div>这个页面被保护了</div>
-                <button onClick={()=>this.go()}>点击登录</button>
+                <button onClick={()=>this.go()} style={{background: '#F00'}}>点击登录</button>
             </div>
         )
     }

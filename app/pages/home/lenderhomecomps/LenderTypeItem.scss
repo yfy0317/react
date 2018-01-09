@@ -3,6 +3,7 @@
   width: 100%;
   background: #fff;
   .item {
+    animation: pulse 1s 1s forwards;
     width: 33%;
     display: inline-block;
     color: #565656;
@@ -11,6 +12,34 @@
     margin-top: 39px;
     img {
       width: 70px;
+      margin-bottom: 10px;
     }
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
