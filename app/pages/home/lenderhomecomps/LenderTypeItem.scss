@@ -1,0 +1,16 @@
+.top {
+  height: 350px;
+  width: 100%;
+  background: #fff;
+  .item {
+    width: 33%;
+    display: inline-block;
+    color: #565656;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 39px;
+    img {
+      width: 70px;
+    }
+  }
+}

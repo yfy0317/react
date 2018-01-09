@@ -1,0 +1,84 @@
+.lenderTui {
+  width: 100%;
+  height: 260px;
+  background: #fff;
+  margin-top: 20px;
+  .leftItem {
+    padding-top: 31px;
+    width: 49.5%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    img {
+      width: 148px;
+    }
+    .name {
+      font-size: 28px;
+      color: #333333;
+      margin-top: 29px;
+      margin-bottom: 13px;
+    }
+    .desc {
+      font-size: 24px;
+      color: #999999;
+      span {
+        margin-right: 15px;
+      }
+    }
+  }
+  .line{
+    background: #DADADF;
+    height: 250px;
+    width: 1PX;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .rightItem{
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
+    .rightBottomItem {
+      height: 96px;
+      width: 100%;
+      padding-top: 34px;
+      img {
+        width: 93px;
+        display: inline-block;
+        margin-left: 19px;
+      }
+      .rightFont {
+        display: inline-block;
+        .name {
+          font-size: 28px;
+          color: #333333;
+          margin-left: 19px;
+          vertical-align: top;
+          margin-bottom: 13px;
+        }
+        .desc {
+          font-size: 24px;
+          color: #999999;
+          margin-left: 19px;
+          span {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+.fine{
+  background: #FF8B00 ;
+  width: 6px;
+  height: 20px;
+  margin-top: 108px;
+  margin-left: 30px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.fineFont{
+  font-size:32px;
+  color:rgba(51,51,51,1);
+  display: inline-block;
+  margin-left: 11px;
+}

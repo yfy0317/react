@@ -12,8 +12,8 @@ export default class Message extends RouterPager {
     }
     render () {
         return (
-            <div>Message
-                <button onClick={()=>this.props.history.push('/home')}>点击跳转</button>
+            <div>
+                Mine
                 <Footer FooterConfig={LenderHomeConfig}/>
             </div>
         )

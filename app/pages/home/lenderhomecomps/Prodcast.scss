@@ -1,0 +1,42 @@
+.allContainer{
+  width: 100%;
+  height: 0.77rem;
+  background: #FFF;
+  line-height: 0.77rem;
+  vertical-align: middle;
+  position: relative;
+  border-bottom:solid 0.01rem #EFEFF4;
+  margin-top: -2px;
+  .vitem{
+    color: #666666;
+    font-size: 0.24rem;
+  }
+  .laba{
+    margin-left: 0.5rem;
+    width: 0.35rem;
+    margin-bottom: 3px;
+  }
+  .lineItem{
+    position: absolute;
+    top: 0rem;
+    width: 6.38rem;
+    display:inline-block;
+    margin-left: 1.12rem;
+    height:0.77rem;
+    overflow: hidden;
+  }
+  .text{
+    margin-left: 0.25rem;
+    display: inline-block;
+    color: #666666;
+    font-size: 0.24rem;
+
+  }
+  .delete{
+    text-align: right;
+    width: 0.34rem;
+    position: absolute;
+    right: 0.4rem;
+    top:0.21rem;
+  }
+}
