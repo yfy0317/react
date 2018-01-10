@@ -1,6 +1,6 @@
 
-import Message from './Mine.jsx'
+import Mine from './Mine.jsx'
 
 module.exports = [
-    {path: '/mine', component: Message, title: '我的', protected: true, cb: true},
+    {path: '/mine', component: Mine, title: '我的', protected: true, cb: true},
 ]
