@@ -10,6 +10,7 @@ export const setWindowScroll = () => (WrappedComponent) => {
             dispatch(actions.setVars('mixinsScrollState', scrollState))
         }
         componentDidMount () {
+            let clentHeight = $(window).height()
             $(window).bind('scroll', function () {
                 let scrollState = {scrollTop: $(window).scrollTop(), clientHeight: clentHeight}
                 dispatch(actions.setVars('mixinsScrollState', scrollState))
