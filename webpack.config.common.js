@@ -105,8 +105,9 @@ module.exports = function (options) {
             },
             proxy: {
                 '/api':{
-                    target: options.apiUrlPort,
+                    target: 'http://localhost:3001',
                     pathRewrite: {"^/api" : ""},
+                    changeOrigin: true
                 },
             }
         }
