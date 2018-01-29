@@ -95,7 +95,7 @@ module.exports = function (options) {
         devServer: {
             historyApiFallback: true, // 不跳转
             inline: true,
-            contentBase: [path.join(__dirname, 'app')],
+            contentBase: __dirname,
             stats: {
                 cached: false,
                 exclude: [

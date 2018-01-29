@@ -3,7 +3,6 @@ import styles from './BaseApplication.scss'
 import { connect } from 'react-redux'
 import ReactLoading from '../app/comps/Loading';
 import fetchinit from '../app/util/FetchInit'
-import DebuggerInit from '../app/util/DebugInit'
 import actions from './redux/actions'
 @connect(
     state =>{ return{showLoading: state.vars.showLoading}},
@@ -15,7 +14,7 @@ class Application extends React.Component {
     }
     componentWillMount(){
         fetchinit(this.props.init)
-        // DebuggerInit()
+        document.body.style.background='#FFF'
     }
     render () {
         let { showLoading } = this.props
