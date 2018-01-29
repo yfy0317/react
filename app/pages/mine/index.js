@@ -1,6 +1,4 @@
 
-import Mine from './Mine.jsx'
-
 module.exports = [
-    {path: '/mine', component: Mine, title: '我的', protected: true, cb: true},
+    {path: '/mine', component: () => import('./Mine.jsx'), title: '我的', protected: {cb: true}},
 ]

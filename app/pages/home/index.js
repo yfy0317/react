@@ -1,7 +1,4 @@
 
-import Home from './Home'
-
-
 module.exports = [
-    {path: '/home', component: Home, title: '首页', },
+    {path: '/home', component: () => import('./Home.jsx'), title: '首页', },
 ]

@@ -14,7 +14,7 @@ export default class Home extends React.Component {
         if(!this.props.backUrl || this.props.backUrl === '/home'){
             this.props.history.replace('/home')
         }else{
-            this.props.protectedCb ? this.cbNext() : this.props.history.replace(`${this.props.backUrl}`)
+            this.props.protectedCb.cb ? this.cbNext() : this.props.history.replace(`${this.props.backUrl}`)
         }
     }
     cbNext() {

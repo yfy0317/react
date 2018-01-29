@@ -1,6 +1,4 @@
 
-import Message from './Message.jsx'
-
 module.exports = [
-    {path: '/message', component: Message, title: '信息'},
+    {path: '/message', component: () => import('./Message.jsx'), title: '信息'},
 ]
