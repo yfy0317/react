@@ -21,7 +21,7 @@ class Application extends React.Component {
         return (
             <div>
                 { this.props.children }
-                { showLoading ? <ReactLoading /> : <div/> }
+                { showLoading && <ReactLoading /> }
             </div>
         )
     }
