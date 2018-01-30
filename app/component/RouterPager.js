@@ -1,7 +1,8 @@
 import React from 'react'
 import store from '../redux/store'
 import actions from '../redux/actions'
-
+import fetch from 'sx-fetch'
+@fetch.inject()
 export default class RouterPager extends React.Component {
     constructor (props) {
         super(props)

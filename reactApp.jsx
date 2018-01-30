@@ -5,7 +5,6 @@ import initReactFastclick from 'react-fastclick';
 import { Provider } from 'react-redux'
 import store from './app/redux/store'
 import {Toast} from 'antd-mobile'
-import Fetch from 'sx-fetch'
 import FadeIn from './app/BaseApplication.jsx'
 import {setTitle} from "./app/util/SetTitle";
 
@@ -19,7 +18,7 @@ ReactDom.render((
                 {routes.map((route, i) => (
                 <Route key={i} exact path={route.path} render={(props) => {
                     return(
-                        <route.component {...props} toast={Toast} fetch={Fetch} protected={route.protected}>
+                        <route.component {...props} toast={Toast}  protected={route.protected}>
                             { setTitle(route.title)}
                         </route.component>)
                 }}/>
