@@ -1,4 +1,3 @@
-let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let util = require('./config/index')
 let path = require('path')
 module.exports = function (options) {
@@ -37,15 +36,7 @@ module.exports = function (options) {
                 {
                     test: /\.(scss)$/,
                     exclude: /(node_modules)/,
-                    loader: options.bundleHash ?
-                        ExtractTextPlugin.extract({
-                            fallback: 'style-loader',
-                            use: [
-                                "css-loader?modules&localIdentName=[name]-[local][hash]",
-                                'postcss-loader',
-                                'sass-loader'
-                            ]
-                        }):[
+                    loader: [
                             "style-loader", // creates style nodes from JS strings,
                             "css-loader?modules&localIdentName=[name]-[local][hash]",
                             'postcss-loader',

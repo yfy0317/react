@@ -14,7 +14,6 @@ class Application extends React.Component {
     }
     componentWillMount(){
         fetchinit(this.props.init)
-        document.body.style.background='#FFF'
     }
     render () {
         let { showLoading } = this.props

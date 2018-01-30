@@ -2,7 +2,6 @@ let webpack= require('webpack');
 let UglifyJSPlugin= require('uglifyjs-webpack-plugin');
 let CompressionPlugin = require("compression-webpack-plugin");
 let HtmlWebpackPlugin = require('html-webpack-plugin') ;
-let ExtractTextPlugin = require('extract-text-webpack-plugin')
 let  BundleAnalyzerPlugin =  require('webpack-bundle-analyzer');
 let OpenBrowserPlugin = require('open-browser-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -49,7 +48,6 @@ let getProdPlugins = function() {
         threshold: 10240,
         minRatio: 0.8
     })),
-    plugins.push(new ExtractTextPlugin('assets/[name]-[contenthash].css',{allChunks: true}))
     plugins.push(new OptimizeCSSPlugin())  //压缩提取出的css，并解决ExtractTextPlugin分离出的js重复问题(多个文件引入同一css文件)
     plugins.push(new webpack.HashedModuleIdsPlugin())
     plugins.push(new webpack.DefinePlugin({
