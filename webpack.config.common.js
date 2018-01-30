@@ -1,5 +1,3 @@
-let util = require('./config/index')
-let path = require('path')
 module.exports = function (options) {
     return {
         devtool: options.devTool, // 配置生成Source Maps，选择合适的选项
