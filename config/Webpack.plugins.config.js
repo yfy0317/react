@@ -70,10 +70,6 @@ let getDevPlugins = function () {
             'NODE_ENV': JSON.stringify('development')
         }
     }))
-    // plugins.push(new webpack.DllReferencePlugin({
-    //     context: __dirname,
-    //     manifest: require('./dll/vendor-manifest.json')
-    // }))
     plugins.push(new HappyPack({
         id:"happybabel",
         loaders:['babel-loader'],

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './BaseApplication.scss'
 import { connect } from 'react-redux'
-import ReactLoading from '../app/comps/Loading';
+import ReactLoading from './component/Loading';
 import fetchinit from '../app/util/FetchInit'
 import actions from './redux/actions'
 @connect(

@@ -1,4 +1,4 @@
-import RouterPager from '../../comps/RouterPager'
+import RouterPager from '../../component/RouterPager'
 import { connect } from 'react-redux'
 import React from 'react'
 import styles from './Home.scss'
