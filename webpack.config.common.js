@@ -94,8 +94,8 @@ module.exports = function (options) {
         plugins: options.plugins,
         devServer: {
             historyApiFallback: true, // 不跳转
-            inline: true,
             contentBase: __dirname,
+            clientLogLevel: "none",
             stats: {
                 cached: false,
                 exclude: [
