@@ -6,7 +6,8 @@
   "scripts": {
     "dll": "webpack -p --config config/webpack.dll.config.js --progress --profile --colors",
     "dev": "cross-env webpack-dev-server --config config/webpack.dev.config.js --watch --hot --inline  --progress --colors --port 3000 --host 0.0.0.0 ",
-    "build": "cross-env webpack --config config/webpack.prod.config.js"
+    "testing": "cross-env TEST_ENV=YES  webpack --config config/webpack.prod.config.js",
+    "build": "cross-env TEST_ENV=NO webpack --config config/webpack.prod.config.js"
   },
   "author": "yanngfeiyu",
   "license": "MIT",
