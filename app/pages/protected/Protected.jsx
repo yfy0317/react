@@ -1,9 +1,10 @@
 import React from 'react'
+import RouterPager from '../../component/RouterPager'
 import { connect } from 'react-redux'
 @connect(
     state =>{ return{backUrl: state.vars.backUrl, protectedCb: state.vars.protectedCb}},
 )
-export default class Home extends React.Component {
+export default class Home extends RouterPager {
     constructor (props) {
         super(props)
     }
