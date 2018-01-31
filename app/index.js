@@ -10,11 +10,21 @@ const routes= [
     ...Protected,
     ...Mine
 ]
-const Loading = () => <div/>;
+const Loading =({ isLoading, error }) => {
+    if (isLoading) {
+        return null;
+    }
+    else if (error) {
+        window.location.reload();
+    }
+    else {
+        return null;
+    }
+};
 routes.forEach((value) => {
     value.component  =  Loadable({
         loader: value.component,
-        loading: Loading
+        loading: Loading,
     });
 })
 export default routes
