@@ -9,13 +9,13 @@
   z-index: 9999999;
 }
 .report_main {
-  width: 300px;
-  height: 275px;
+  width: 250px;
+  height: 225px;
   background: rgba(0, 0, 0, .5);
   margin: 0 auto;
   border-radius: 6px;
   position: fixed;
-  left: 50%;
+  left: 53%;
   margin-left: -150px;
   top: 50%;
   margin-top: -137px;
@@ -23,9 +23,9 @@
 
 .report_values {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   color: #fff;
-  margin-top: 15px;
+  margin-top: -30px;
 }
 
 /*!
@@ -67,7 +67,7 @@
   width: 80px;
   height: 80px;
   background: transparent;
-  border-width: 2px;
+  border-width: 1px;
   border-bottom-color: transparent;
   border-radius: 100%;
   -webkit-animation: ball_clip_rotate .75s linear infinite;
@@ -82,11 +82,11 @@
 }
 
 .la_ball_clip_rotate.la_2x > div {
-  width: 120px;
-  height: 120px;
-  margin-left: 90px;
-  border-width: 10px;
-  margin-top: 37.5px;
+  width: 100px;
+  height: 100px;
+  margin-left: 75px;
+  border-width: 7px;
+  margin-top: 40px;
   margin-bottom: 87.5px;
 }
 

@@ -1,31 +1,18 @@
 import React from 'react'
-
-export const setTitle = (getTitle) => (WrappedComponent) => {
+import Header from '../component/Header'
+export const setTitle = () => (WrappedComponent) => {
     return class extends React.Component {
-        getTitle(){
-            const title = getTitle
-            if(title) {
-                document.title = title
-            }
-            var mobile = navigator.userAgent.toLowerCase();
-            if (/iphone|ipad|ipod/.test(mobile)) {
-                var iframe = document.createElement('iframe');
-                iframe.style.display = 'none'
-                var iframeCallback = function () {
-                    setTimeout(function () {
-                        iframe.removeEventListener('load', iframeCallback);
-                        document.body.removeChild(iframe);
-                    }, 0);
-                }
-                iframe.addEventListener('load', iframeCallback);
-                document.body.appendChild(iframe);
-            }
+        state={
+            title: document.title && document.title
+        }
+        constructor (props) {
+            super(props)
         }
         componentWillMount(){
-            this.getTitle(this.props)
         }
         render() {
-            return <WrappedComponent {...this.props} />
+            const ua = window.navigator.userAgent;
+            return (<div>{(/MicroMessenger/i.test(ua) || /SuiXingPay-Mpos/i.test(ua)||/SuiXingPay-Cashier/i.test(ua) ) ? '':<div><Header title={this.state.title}/><WrappedComponent {...this.props} /></div>}</div>)
         }
     }
 }
