@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 @connect(
     state =>{ return{backUrl: state.vars.backUrl, protectedCb: state.vars.protectedCb}},
 )
-export default class Home extends RouterPager {
+export default class Login extends RouterPager {
     constructor (props) {
         super(props)
     }

@@ -1,6 +1,7 @@
 import React from 'react'
 import RouterPager from '../../component/RouterPager'
-
+import FooterConfig from '../../component/config/footerConfig';
+import Footer from '../../component/Footer'
 export default class Message extends RouterPager {
     constructor (props) {
         super(props)
@@ -10,8 +11,9 @@ export default class Message extends RouterPager {
     }
     render () {
         return (
-            <div>Message
+            <div>Message22
                 <button onClick={()=>this.props.history.push('/home')}>点击跳转</button>
+                <Footer FooterConfig={FooterConfig}/>
             </div>
         )
     }

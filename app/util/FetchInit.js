@@ -20,7 +20,19 @@ const fetchinit =(init)=>{
             if(errorTip) Toast.fail(errorTip);
         },
         onShowSuccessTip: (response, successTip) => {
-            if(successTip) Toast.success(successTip);
+            switch (response.data.code){
+                case '0000':
+                    return;
+                case '2000':
+                    //版本更新;
+                    $.cookie('Version-Token', response.data.msg, { expires: 8, path: '/'});
+                    setTimeout(()=>{
+                        window.location.reload();
+                    },1000)
+                    throw new Error('请稍候，页面升级中');
+                default:
+                    return;
+            }
         },
         isMock: (url) => {
             return url.startsWith('/mock');

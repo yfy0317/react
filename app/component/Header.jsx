@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Header.scss';
-import icon from './img/back-black.png'
+import icon from './image/headerImg/back-black.png'
 export default class Header extends React.Component {
     goBack(){
         window.history.back()
