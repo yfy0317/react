@@ -1,14 +1,14 @@
 import Message from './pages/message/index'
 import Home from './pages/home/index'
 import Mine from './pages/mine/index'
-import Protected from './pages/common/index'
+import Common from './pages/common/index'
 import Loadable from 'react-loadable'
 import Loadings from './component/Loading.jsx'
 import React from 'react'
 const routes= [
     ...Message,
     ...Home,
-    ...Protected,
+    ...Common,
     ...Mine
 ]
 const Loading =({ error, pastDelay}) => {
