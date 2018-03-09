@@ -1,3 +1,5 @@
+const antdTheme = require('./antd-theme.json');
+
 module.exports = function (options) {
     return {
         devtool: options.devTool, // 配置生成Source Maps，选择合适的选项
@@ -47,7 +49,7 @@ module.exports = function (options) {
                     use: [
                         "style-loader", // creates style nodes from JS strings,
                         'postcss-loader',
-                        "less-loader", // compiles Sass to CSS
+                        {loader: 'less-loader', options: {modifyVars: antdTheme}}
                     ]
                 },
                 {
