@@ -20,7 +20,7 @@ export default class Home extends RouterPager {
     render () {
         return (
             <div>
-                <div>Home</div>
+                <div>Home4444</div>
                 <Carousel/>
             <Footer FooterConfig={FooterConfig}/>
             </div>
